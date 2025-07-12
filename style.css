@@ -57,6 +57,17 @@ li:active{
     border-radius: 8px;
     height: fit-content;
 }
+.container p{
+  text-align: center;
+  color: var(--primary-color);
+  font-style: italic;
+  margin-top: 20px;
+  max-width: 200px;
+  padding: 10px;
+  background-color: var(--item-hover);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
 button:hover{
     background-color: var(--button-hover);
     color: var(--item-hover);

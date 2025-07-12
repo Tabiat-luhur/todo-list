@@ -1,6 +1,15 @@
 const list = document.getElementById('myList');
 const input = document.getElementById('itemInput');
 const button = document.getElementById('addBtn');
+const motivasi = document.getElementById('motivasiText');
+
+function updateMotivasi() {
+  if (list.children.length === 0) {
+    motivasi.style.display = 'block';
+  } else {
+    motivasi.style.display = 'none';
+  }
+}
 
 button.addEventListener('click', function () {
   const value = input.value.trim();
@@ -15,6 +24,7 @@ button.addEventListener('click', function () {
 
     deleteBtn.addEventListener('click', function () {
       li.remove(); 
+      updateMotivasi();
     });
 
     li.appendChild(deleteBtn);
@@ -26,5 +36,6 @@ button.addEventListener('click', function () {
     list.appendChild(li);
 
     input.value = '';
+    updateMotivasi();
   }
 });
