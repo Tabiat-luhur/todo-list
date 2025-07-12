@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  --bg-color: #f9f9f9;
+  --primary-color: #4a90e2;
+  --accent-color: #50e3c2;
+  --text-color: #333;
+  --border-color: #ddd;
+  --item-hover: #eef6ff;
+  --button-hover: #3a7bd5;
+  --error-color: #e74c3c;
+}
+body{
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    place-items: center;
+    background-color: #333;
+    margin-top: 60px;
+}
+h1 {
+  color: var(--primary-color);
+}
+.pen{
+    fill: var(--error-color);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li:hover{
+    border: 1px solid var(--primary-color);
+
+}
+li:active{
+    background-color: #3a923a;
+    button{
+        background-color: rgba(2, 2, 2, 0);
+        border: 1px solid rgba(2, 2, 2, 0);
+    }
+}
+
+.container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+button:hover{
+    background-color: var(--button-hover);
+    color: var(--item-hover);
+    border-radius: 5px;
+}
+button{
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+}
+input{
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+input:hover{
+    border: 2px solid var(--button-hover);
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.deleteBtn{
+    margin-left: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: auto;
+}
+.deleteBtn:hover{
+    background-color: var(--error-color);
+    svg{
+        fill: var(--bg-color);
+    }
+}
+.done{
+    background-color: var(--border-color);
+    opacity: 20%;
+    text-decoration: line-through;
+}
